@@ -1,9 +1,10 @@
+"use client";
 import React from 'react'
-import Router from 'next/router'
+import {useRouter} from 'next/navigation'
 
 
 function page() {
-  const router = Router()
+  const router = useRouter()
 const  editorDeleteBlog = () => { 
     router.push('/blog')
    }
