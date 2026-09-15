@@ -7,7 +7,7 @@ function Page() {
 	const router = useRouter();
 
 	const editorDeleteBlog = () => {
-		router.push("/blog");
+		router.push("/blogs");
 	};
 
 	const createBlog = () => {
