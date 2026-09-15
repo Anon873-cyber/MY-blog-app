@@ -26,7 +26,7 @@ function BlogBox({ editoptions=false,handleDelete,id,handleEdit,imageurl, title,
     <div className="mt-6 flex items-center justify-between">
       <button
         type="button"
-        className="text-sm font-medium text-gray-700 transition hover:text-black"
+        className="text-sm cursor-pointer font-medium text-gray-700 transition hover:text-black"
         {...props}
       >
         Read more →
