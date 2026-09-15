@@ -11,7 +11,7 @@ function Page() {
 	};
 
 	const createBlog = () => {
-		router.push("/manage-blog");
+		router.push("/create");
 	};
 
 	return (
