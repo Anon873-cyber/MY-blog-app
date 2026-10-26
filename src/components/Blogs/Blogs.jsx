@@ -9,16 +9,23 @@ function Blogs() {
   const [blogs, setBlogs] = useState([]);
   const [admin, setadmin] = useState(false);
   const router = useRouter();
-  useEffect(() => {
-    const posts = async () => {
-      try {
-        const response = await service.getPosts();
-        setBlogs(response.documents);
-        console.log(response.documents);
-      } catch (error) {
-        console.error(error);
-      }
-    };
+useEffect(() => {
+  const posts = async () => {
+    try {
+      const response = await service.getPosts();
+
+      const sortedBlogs = response.documents.sort(
+        (a, b) => new Date(b.$createdAt) - new Date(a.$createdAt)
+      );
+
+      setBlogs(sortedBlogs);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  posts();
+}, []);
 
     posts();
   }, []);
